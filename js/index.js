@@ -37,7 +37,8 @@ if (winW / winH > desW / desH) {
                 pSpan.addEventListener(arr[i].e, function () {
                    removeElement(first);
 
-                    oLis = document.querySelectorAll(".slide>li");
+                    oLis = document.querySelectorAll(".slide>.li");
+
                     [].forEach.call(oLis, function () {
                         arguments[0].index = arguments[1];  //arguments[1]把当前元素的索引赋值给arguments[0].index 当前元素的自定义属性index
                         //addEventListener 添加DOM二级事件
