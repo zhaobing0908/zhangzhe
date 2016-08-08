@@ -1,0 +1,1463 @@
+body,div,ul,li,p,h2,h3,h6,a{
+    margin:0;
+    padding:0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #ff0000;
+}
+html,body{
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    font: 22px/2em "方正兰亭纤黑简体",Helvetica, Arial,sans-serif;
+}
+
+/*-----------------------音乐-------------------------*/
+.music{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    z-index: 50;
+    width: 30px;
+    height: 30px;
+    background: url("../images/audio.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bounce{
+    -webkit-animation:animations 2s infinite linear;
+    animation:animations 2s infinite linear;
+}
+@-webkit-keyframes animations {
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    75%{
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes animations {
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    75%{
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/*-----------------------箭头-------------------------*/
+.icon-up{
+    position: absolute;
+    left: 50%;
+    bottom:4%;
+    z-index: 999;
+    margin-left: -10px;
+    height: auto;
+    width: 20px;
+}
+.up-img{
+    -webkit-animation: moveToBottom ease 1.5s both infinite;
+    animation: moveToBottom ease 1.5s both infinite;
+}
+@-webkit-keyframes moveToBottom {
+    from { }
+    to { -webkit-transform: translateY(100%);transform: translateY(100%); }
+}
+@keyframes moveToBottom {
+    from { }
+    to { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
+
+#main{
+    position: absolute;
+    left:50%;
+    top:0;
+    margin-left:-320px;
+    width:640px;
+    height:960px;
+    overflow: hidden;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+.zIndex{
+    z-index: 10;
+}
+.slide{
+    width:100%;
+    height: 100%;
+}
+.slide>li{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-size: 100% 100%;
+}
+#first{
+    z-index: 15;
+    background: url("../images/a0.jpg")
+}
+
+#xian{
+    width: 100%;
+    font-size: 45px;
+    margin-top:65%;
+    text-align: center;
+}
+.loading{
+    margin: 0 15%;
+    width: 70%;
+    height: 40px;
+    border-radius: 10px;
+    background: #fff;
+    position: absolute;
+    top:50%;
+}
+
+.loading span{
+    display: block;
+    width: 0;
+    height: 40px;
+    background-image: -webkit-linear-gradient(45deg,#5cb85c 25%,#74c274 50%,#5cb85c 75%,#74c274 100%);
+    background-image: linear-gradient(45deg,#5cb85c 25%,#74c274 50%,#5cb85c 75%,#74c274 100%);
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+    -webkit-transition :1s;
+    transition :1s;
+}
+.slide>li:nth-child(1){
+    background: url("../images/a1.png") no-repeat;
+}
+.slide>li:nth-child(2){
+    background: url("../images/a2.png") no-repeat;
+}
+.slide>li:nth-child(3){
+    background: url("../images/a3.png") no-repeat;
+}
+.slide>li:nth-child(4){
+    background: url("../images/a4.png") no-repeat;
+}
+.slide>li:nth-child(5){
+    background: url("../images/a5.jpg") no-repeat;
+}
+.slide>li:nth-child(6){
+    background: url("../images/a6-1.png") no-repeat;
+}
+.slide>li:nth-child(7){
+    background: url("../images/a6-1.png") no-repeat;
+}
+
+
+.a1,.a2,.a3,.a4,.a5,.a6,.a7{
+    position: relative;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-animation: pulse 2s ease 0s both;
+    animation: pulse 2s ease 0s both;
+}
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(0.8, 0.8, 0.8);
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.4, 1.4, 1.4);
+        transform: scale3d(1.4, 1.4, 1.4);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(0.8, 0.8, 0.8);
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.4, 1.4, 1.4);
+        transform: scale3d(1.4, 1.4, 1.4);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+/*-------------------第一张----------------------*/
+
+
+
+
+/*--------------钟表----------*/
+.a1-content{
+    position: relative;
+    width:100%;
+    height: 100%;
+}
+.a1-content img:nth-child(1){
+    position: absolute;
+    left:-24%;
+    top:-10%;
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
+}
+.a1-content img:nth-child(2){
+    position: absolute;
+    left:56%;
+    top:19%;
+    -webkit-transform: scale(0.3) rotate(90deg)  ;
+    transform: scale(0.3) rotate(90deg);
+
+}
+.a1-content img:nth-child(3){
+    position: absolute;
+    left:23%;
+    top:22%;
+    -webkit-animation:clock 60s infinite linear;
+    animation:clock 60s infinite linear;
+
+}
+@-webkit-keyframes clock {
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    75%{
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes clock {
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    75%{
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.a1-content img:nth-child(4) {
+    position: absolute;
+    left: 41%;
+    top: 26%;
+    -webkit-transform: scale(0.3) rotate(-120deg);
+    transform: scale(0.3) rotate(-120deg);
+}
+
+.a1 p:nth-of-type(1){
+    position: absolute;
+    left: 62%;
+    top: 9%;
+    margin-left: -200px;
+    width:400px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 60px;
+}
+.a1 p:nth-of-type(2){
+    position: absolute;
+    left: 16%;
+    top: 63%;
+    width:50%;
+    height: 100%;
+    line-height: 35px;
+    font-size: 30px;
+}
+/*-------------------第二张 上面----------------------*/
+.a2-top{
+    position: relative;
+    top:-40%;
+    height: 30%;
+}
+#a2 .a2-top{
+    -webkit-animation-name: myMove;
+    animation-name: myMove;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+#a2 .a2-top :nth-child(1){
+    -webkit-animation-name: swing;
+    animation-name: swing;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes myMove {
+    25%{
+        top: -20%;
+    }
+    50%,100% {
+        top: 0;
+    }
+    75%{
+        top:10%;
+    }
+}
+@keyframes myMove {
+    25%{
+        top: -20%;
+    }
+    50%,100% {
+        top: 0;
+    }
+    75%{
+        top:10%;
+    }
+}
+@-webkit-keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 30deg);
+        transform: rotate3d(0, 0, 1, 30deg);
+        opacity: 0.1;
+    }
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -30deg);
+        transform: rotate3d(0, 0, 1, -30deg);
+        opacity: 0.8;
+    }
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+        opacity: 0.3;
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -15deg);
+        transform: rotate3d(0, 0, 1, -15deg);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+        opacity: 0.8;
+    }
+}
+@keyframes swing {
+    20% {
+        -webkit-transform: rotate3d(0, 0, 1, 30deg);
+        transform: rotate3d(0, 0, 1, 30deg);
+        opacity: 0.1;
+    }
+    40% {
+        -webkit-transform: rotate3d(0, 0, 1, -30deg);
+        transform: rotate3d(0, 0, 1, -30deg);
+        opacity: 0.8;
+    }
+    60% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg);
+        opacity: 0.3;
+    }
+    80% {
+        -webkit-transform: rotate3d(0, 0, 1, -15deg);
+        transform: rotate3d(0, 0, 1, -15deg);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg);
+        opacity: 0.8;
+    }
+}
+.a2-top p{
+    padding-top:10%;
+    font-size: 70px;
+    text-align: center;
+}
+.a2-top img{
+    position: absolute;
+}
+#a2 .a2-top img{
+    -webkit-animation-delay:0.2s;
+    animation-delay: 0.2s;
+}
+#a2 .a2-top img:nth-of-type(1){
+    top:0;
+}
+#a2 .a2-top img:nth-of-type(2){
+    top:0;
+    right:0;
+}
+#a2 .a2-top img:nth-of-type(3){
+    left:50%;
+    top:55%;
+    width:524px;
+    height: 124px;
+    margin-left:-262px;
+}
+/*-------------------第二张下面----------------------*/
+.a2-bot{
+    position: relative;
+    height: 70%;
+}
+.a2-bot img{
+    position: absolute;
+}
+.a2-bot>img:nth-of-type(1){
+    top:20%;
+    left: 50%;
+    margin-left: -99px;
+    width:198px;
+    height: 192px;
+    -webkit-animation-name: myBg;
+    animation-name: myBg;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes myBg {
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes myBg {
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/*出现前*/
+#a2 .a2-bot div img{
+    -webkit-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+}
+.a2-bot div img{
+    left:-60%;
+}
+#a2 .a2-bot div{
+    position: relative;
+    height: 100%;
+}
+/*出现后*/
+#a2 .a2-bot div img:nth-of-type(1){
+    top:16%;
+    left:0;
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+#a2 .a2-bot div img:nth-of-type(2){
+    top:48%;
+    left:8%;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: 3s;
+    transition-delay: 3s;
+}
+#a2 .a2-bot div img:nth-of-type(3){
+    top:70%;
+    left:20%;
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    -webkit-transition-delay: 4s;
+    transition-delay: 4s;
+}
+#a2 .a2-bot div img:nth-of-type(4){
+    top:65%;
+    left:63%;
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    -webkit-transition-delay: 4s;
+    transition-delay: 4s;
+}
+#a2 .a2-bot div img:nth-of-type(5){
+    top:45%;
+    left:80%;
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: 3s;
+    transition-delay: 3s;
+}
+#a2 .a2-bot div img:nth-of-type(6){
+    top:20%;
+    left:84%;
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+#a2 .a2-bot div img:nth-of-type(7){
+    left:74%;
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+}
+.a2-bot h2{
+    position: absolute;
+    top: 29%;
+    left: 42%;
+    font-size: 34px;
+    letter-spacing: 36px;
+}
+.a2-bot p{
+    position: absolute;
+    top: 56%;
+    left: 23%;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+/*-------------------第三张----------------------*/
+.a3-top{
+    width:100%;
+    height: 30%;
+}
+.a3-top img{
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -85px;
+    height: auto;
+    width: 170px;
+}
+.a3-bot{
+    position: relative;
+    width:100%;
+    height: 70%;
+}
+.a3-Left img{
+    position: absolute;
+    left:20%;
+}
+.a3-Left img:nth-child(1){
+    top:6%;
+}
+.a3-Left img:nth-child(2){
+    top:57%;
+}
+
+.a3-Right{
+    height: 100%;
+}
+.a3-RightTop{
+    position: absolute;
+    top:3%;
+    left:38%;
+    width:100%;
+    height: 50%;
+}
+.a3-Right p{
+    position: absolute;
+    left: -150%;
+    line-height: 42px;
+    font-size: 24px;
+}
+.a3-RightBot{
+    position: absolute;
+    top:54%;
+    left:38%;
+    width:100%;
+    height: 33%;
+}
+#a3 .a3-Right p{
+    -webkit-animation-name: a3-Right;
+    animation-name: a3-Right;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes a3-Right {
+    25% {
+        left: -75%;
+    }
+    50%, 100% {
+        left: 0;
+    }
+    75% {
+        left: 75%;
+    }
+}
+@keyframes a3-Right {
+    25% {
+        left: -75%;
+    }
+    50%, 100% {
+        left: 0;
+    }
+    75% {
+        left: 75%;
+    }
+}
+#a3 .a3-Right .a3-RightTop p:nth-of-type(1){
+    top: 0;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+#a3 .a3-Right .a3-RightTop p:nth-of-type(2){
+    top: 13%;
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+#a3 .a3-Right .a3-RightTop p:nth-of-type(3){
+    top: 26%;
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+#a3 .a3-Right .a3-RightTop p:nth-of-type(4){
+    top: 39%;
+    -webkit-animation-delay: 0.8s;
+    transition-delay: 0.8s;
+}
+#a3 .a3-Right .a3-RightTop p:nth-of-type(5){
+    top: 52%;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+#a3 .a3-Right .a3-RightTop p:nth-of-type(6){
+    top: 65%;
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+#a3 .a3-Right .a3-RightTop p:nth-of-type(7){
+    top: 78%;
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+#a3 .a3-Right .a3-RightBot p:nth-of-type(1){
+    top: 0;
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+#a3 .a3-Right .a3-RightBot p:nth-of-type(2){
+    top: 19%;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+#a3 .a3-Right .a3-RightBot p:nth-of-type(3){
+    top: 38%;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+#a3 .a3-Right .a3-RightBot p:nth-of-type(4){
+    top: 58%;
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+#a3 .a3-Right .a3-RightBot p:nth-of-type(5){
+    top: 77%;
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+/*-------------------第四张----------------------*/
+.a4 .a4-top{
+    position: absolute;
+    top:5%;
+    width:100%;
+    text-align: center;
+}
+.a4-top h2{
+    line-height: 80px;
+    font-size: 60px;
+}
+.a4-top span{
+    font-size: 36px;
+}
+.a4-content{
+    position: absolute;
+    top:20%;
+    left:50%;
+    margin-left:-217px;
+    width: 434px;
+    height: 396px;
+    background: url("../images/a4-content.png") no-repeat;
+}
+.a4-content div{
+    position: absolute;
+    top:31%;
+    left: 29%;
+    width: 170px;
+    height: 170px;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    -webkit-animation:a4-animations 1s infinite linear;
+    animation:a4-animations 1s infinite linear;
+}
+@-webkit-keyframes a4-animations {
+    0%{
+        -webkit-transform: rotate(0deg);
+        border-color: #ccc;
+    }
+    25%{
+        -webkit-transform: rotate(90deg);
+        border-color: #888;
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        border-color: #000;
+    }
+    75%{
+        -webkit-transform: rotate(270deg);
+        border-color: #888;
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        border-color: #ccc;
+    }
+}
+@keyframes a4-animations {
+    0%{
+        -webkit-transform: rotate(0deg);
+        border-color: #ccc;
+    }
+    25%{
+        -webkit-transform: rotate(90deg);
+        border-color: #888;
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        border-color: #000;
+    }
+    75%{
+        -webkit-transform: rotate(270deg);
+        border-color: #888;
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+        border-color: #ccc;
+    }
+}
+.a4 img{
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin:-36px 0 0 -31px;
+    width:50px;
+    height:50px;
+    -webkit-transform: rotate(0deg);  /*rotate 旋转*/
+}
+#a4 img:nth-child(2){
+    left:50%;
+    top:24%;
+}
+#a4 img:nth-child(3){
+    left:25%;
+    top:44%;
+}
+#a4 img:nth-child(4){
+    left:29%;
+    top:79%;
+}
+#a4 img:nth-child(5){
+    left:73%;
+    top:79%;
+}
+#a4 img:nth-child(6){
+    left:77%;
+    top:43%;
+}
+#a4 img{
+    -webkit-transform: rotate(720deg);
+    -webkit-transition: 1s;
+}
+.a4-bot{
+    position: relative;
+    top:64%;
+    left: 50%;
+    margin-left: -40%;
+    width:80%;
+    height: 28%;
+}
+.a4-bot p{
+    position: absolute;
+    left:300%;
+    top:50%;
+    width:100%;
+}
+#a4 .a4-bot p{
+    -webkit-animation-name: a4-Bot;
+    animation-name: a4-Bot;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes a4-Bot {
+    25% {
+        left: 150%;
+    }
+    50%,100%{
+        left: 0;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    75% {
+        left: -150%;
+    }
+}
+@keyframes a4-Bot {
+    25% {
+        left: 150%;
+    }
+    50%,100%{
+        left: 0;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    75% {
+        left: -150%;
+    }
+}
+#a4 .a4-bot p:nth-of-type(1){
+    top:0;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+#a4 .a4-bot p:nth-of-type(2){
+    top:26%;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+#a4 .a4-bot p:nth-of-type(3){
+    top:51%;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+#a4 .a4-bot p:nth-of-type(4){
+    top:76%;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+.a4-bot p span{
+    line-height: 30px;
+    font-size: 20px;
+    display: inline-block;
+}
+.a4-bot p span:nth-child(1){
+    position: relative;
+    top:-6px;
+    margin-bottom:44px;
+    color: red;
+}
+.a4-bot p span:nth-child(2){
+    position: absolute;
+}
+/*-------------------第五张----------------------*/
+.a5-top{
+    margin:5% 0;
+    width:100%;
+    height: 20%;
+    text-align: center;
+}
+.a5-top h2{
+    line-height: 66px;
+    font-size: 56px;
+}
+.a5-top p{
+    line-height: 50px;
+    font-size: 35px;
+}
+/*下面左边*/
+.a5-bot{
+    position: relative;
+    left:50%;
+    top:0;
+    margin-left:-40%;
+    width:80%;
+    height: 70%;
+}
+.a5-botLeft{
+    position: absolute;
+    width: 10%;
+    height: 100%;
+}
+.a5-botLeft li{
+    position: relative;
+    top:2px;
+    height: 38%;
+}
+.a5-botLeft li:nth-child(2){
+    top:11%;
+}
+.a5-botLeft li img{
+    position: absolute;
+    top:0;
+    -webkit-animation: myTop-Bot 3s linear 2s 2 both;
+    animation: myTop-Bot 3s linear 2s 2 both;
+}
+@-webkit-keyframes myTop-Bot {
+    25%,75%{
+        top:50%;
+    }
+    50%{
+        top:100%;
+    }
+    100%{
+        top:0;
+    }
+}
+@keyframes myTop-Bot {
+    25%,75%{
+        top:50%;
+    }
+    50%{
+        top:100%;
+    }
+    100%{
+        top:0;
+    }
+}
+/*下面右边*/
+.a5-botRight{
+    position: absolute;
+    left:10%;
+    width: 90%;
+    height: 100%;
+}
+.a5-botRight li{
+    position: relative;
+    height:48%;
+}
+.a5-botRight li h3{
+    line-height: 40px;
+    font-size: 26px;
+    color: #db3839;
+}
+.a5-botRight li p{
+    position: absolute;
+    top:300%;
+    font-size: 20px;
+}
+#a5 .a5-botRight li p{
+    -webkit-animation: myBot 6s linear both;
+}
+@-webkit-keyframes myBot {
+    0%{
+        -webkit-transform: translate(0,400%);
+    }
+    25%{
+        -webkit-transform: translate(0,300%);
+    }
+    50%{
+        -webkit-transform: translate(0,200%);
+    }
+    75%{
+        -webkit-transform: translate(0,100%);
+    }
+    100%{
+        -webkit-transform: translate(0,0%);
+    }
+}
+@keyframes myBot {
+    0%{
+        -webkit-transform: translate(0,400%);
+    }
+    25%{
+        -webkit-transform: translate(0,300%);
+    }
+    50%{
+        -webkit-transform: translate(0,200%);
+    }
+    75%{
+        -webkit-transform: translate(0,100%);
+    }
+    100%{
+        -webkit-transform: translate(0,0%);
+    }
+}
+/*#a5 .a5-botRight li p:nth-of-type(4){*/
+/*-webkit-animation: hello 6s linear both;*/
+/*}*/
+@-webkit-keyframes hello{
+    0%{
+        -webkit-transform: translate(0,200%);
+        transform: translate(0,200%);
+    }
+    50%{
+        -webkit-transform: translate(0,100%);
+        transform: translate(0,100%);
+    }
+    100%{
+        -webkit-transform: translate(0,0%);
+        transform: translate(0,0%);
+    }
+}
+@keyframes hello{
+    0%{
+        -webkit-transform: translate(0,200%);
+        transform: translate(0,200%);
+    }
+    50%{
+        -webkit-transform: translate(0,100%);
+        transform: translate(0,100%);
+    }
+    100%{
+        -webkit-transform: translate(0,0%);
+        transform: translate(0,0%);
+    }
+}
+#a5 .a5-botRight li p:nth-of-type(1){
+    color:#00ff00;
+    top:12%;
+    -webkit-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+#a5 .a5-botRight li p:nth-of-type(2){
+    top:24%;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+}
+#a5 .a5-botRight li p:nth-of-type(3){
+    top:36%;
+    -webkit-transition-delay: 1.5s;
+    transition-delay: 1.5s;
+}
+#a5 .a5-botRight li p:nth-of-type(4){
+    top:48%;
+    /*line-height: 40px;*/
+    -webkit-transition-delay: 2s;
+    transition-delay: 2s;
+}
+#a5 .a5-botRight li p:nth-of-type(5){
+    top:60%;
+    -webkit-transition-delay: 2.5s;
+    transition-delay: 2.5s;
+}
+/*-------------------第六张----------------------*/
+.a6-content{
+    position: absolute;
+    top:35%;
+    left:50%;
+    margin-left:-172px;
+    width:344px;
+    height: 344px;
+}
+
+.a6-content>img:nth-child(2){
+    position: absolute;
+    top:27%;
+    left:37%;
+    margin-left:-37.5px;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}
+/*--------------------------也许成功要走弯路，但我懂得坚持--------------------------------*/
+
+.a6 p{
+    -webkit-animation-name: fadeIn; /*动画名称*/
+    webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 2s; /*动画持续时间*/
+    animation-duration: 2s;
+    /*-webkit-animation-timing-function:ease;/!*动画效果（ease;ease-in;ease-in-out;linear;cubic-bezier）*!/*/
+    -webkit-animation-iteration-count:1 ; /*动画次数，默认值为1*/
+    animation-iteration-count:1 ;
+    -webkit-animation-delay: 1s; /*延迟时间*/
+    animation-delay: 1s;
+    font-weight: 900;
+}
+.a6 p:nth-of-type(1){
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    margin-left: -200px;
+    -webkit-animation-timing-function:cubic-bezier(0,1.5,0.5,1.5);
+    animation-timing-function:cubic-bezier(0,1.5,0.5,1.5);
+}
+.a6 p:nth-of-type(2){
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    margin-left: -200px;
+    -webkit-animation-timing-function:cubic-bezier(0,1.5,0.5,1.5);
+    animation-timing-function:cubic-bezier(0,1.5,0.5,1.5);
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+        font-size:0;
+    }
+    50% {
+        opacity: 0.4; /*中间状态 透明度为0*/
+        font-size:15px;
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+        font-size:30px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+        font-size:0;
+    }
+    50% {
+        opacity: 0.4; /*中间状态 透明度为0*/
+        font-size:15px;
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+        font-size:30px;
+    }
+}
+
+
+
+/*  ----------------------------- 最后一页动画-------------------------------*/
+
+.a7 {
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    font-style:italic;
+}
+
+/*相册处*/
+.a7 > p:nth-child(1) {
+    position: absolute;
+    top: 10px;
+    right: 75px;
+    width: 160px;
+    height: 224px;
+    border: 10px solid #fff;
+    box-shadow: 5px 5px 15px 5px #3c3c3c;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+}
+
+/*相框飘动 动画帧 flap:飘动*/
+@-webkit-keyframes flap {
+    0%, 50%, 100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes flap {
+    0%, 50%, 100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+    75% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+}
+
+/*飘动动画*/
+.a7 > p:nth-child(1) {
+    -webkit-animation: flap 3s ease-out infinite alternate;
+    animation: flap 3s ease-out infinite alternate;
+}
+/*我的梦想*/
+.a7 > p:nth-child(2) {
+    position: absolute;
+    top: 5%;
+    left: 16%;
+    width: 5%;
+    height:50px;
+    line-height:50px ;
+    -webkit-animation: change 2s  ease-in  infinite ;
+    animation: change 2s  ease-in  infinite ;
+
+}
+
+
+.a7 > p:nth-child(3) {
+    position: absolute;
+    top: 5%;
+    left: 24%;
+    width: 5%;
+    height:50px;
+    line-height:50px ;
+    -webkit-animation: change 2s  ease-in  infinite ;
+    animation: change 2s  ease-in  infinite ;
+
+}
+.a7 > p:nth-child(4) {
+    position: absolute;
+    top: 5%;
+    left: 32%;
+    width: 5%;
+    height:50px;
+    line-height:50px ;
+    -webkit-animation: change 2s  ease-in  infinite ;
+    animation: change 2s  ease-in  infinite ;
+
+}
+.a7 > p:nth-child(5) {
+    position: absolute;
+    top: 5%;
+    left: 40%;
+    width: 5%;
+    height:50px;
+    line-height:50px ;
+    -webkit-animation: change 2s  ease-in  infinite ;
+    animation: change 2s  ease-in  infinite ;
+
+}
+
+@-webkit-keyframes change {
+    0%{ text-shadow: 0 0 10px red}
+    50%{ text-shadow: 0 0 80px yellow}
+    100%{ text-shadow: 0 0 10px green}
+}
+@keyframes change {
+    0%{ text-shadow: 0 0 10px red}
+    50%{ text-shadow: 0 0 80px yellow}
+    100%{ text-shadow: 0 0 10px green}
+}
+.a7 p:nth-of-type(6){
+    position: absolute;
+    left: 13%;
+    top:40%;
+    width: 100%;
+    height: 85px;
+    line-height: 85px;
+    font-size:145% ;
+    -webkit-animation: go 2s ease infinite;
+    animation: go 2s ease infinite;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes go {
+    0%,100%{
+        left:7%;
+    }
+    50%{
+        left:17%;
+    }
+
+}
+@keyframes go {
+    0%,100%{
+        left:7%;
+    }
+    50%{
+        left:17%;
+    }
+
+}
+
+
+
+
+/*--------------------------风车的实现--------------------------------*/
+
+/*风车的盒子*/
+.a7 div {
+    position: absolute;
+    width: 200px;
+    height: 530px;
+    bottom: -100px;
+}
+
+/*从右到左*/
+/*第一个风车*/
+.a7 .a7-1 {
+    right: 20px;
+    bottom: -180px;
+    -webkit-transform: scale(0.6) rotate(40deg);
+    transform: scale(0.6) rotate(40deg);
+}
+
+/*第二个风车*/
+.a7 .a7-2 {
+    right: 80px;
+    bottom: -140px;
+    -webkit-transform: scale(0.8) rotate(25deg);
+    transform: scale(0.8) rotate(25deg);
+}
+
+/*第三个风车*/
+.a7 .a7-3 {
+    right: 160px;
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+}
+
+/*第四个风车*/
+.a7 .a7-4 {
+    right: 250px;
+    -webkit-transform: scale(1.2) rotate(-10deg);
+    transform: scale(1.2) rotate(-10deg);
+}
+
+/*第五个风车*/
+.a7 .a7-5 {
+    right: 350px;
+    -webkit-transform: scale(1.4) rotate(-25deg);
+    transform: scale(1.4) rotate(-25deg);
+}
+
+/*每个风车的风车头*/
+.a7 div p:nth-child(1) {
+    position: absolute;
+    bottom: 250px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: url("../images/feng1.png") no-repeat;
+    z-index: 1;
+}
+
+/*每个风车的杆*/
+.a7 div p:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+    width: 100px;
+    height: 330px;
+    background: url("../images/feng2.png");
+}
+
+/*风车转动  turn:转动*/
+@-webkit-keyframes turn {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(1080deg);
+        transform: rotate(1080deg);
+    }
+}
+
+@keyframes turn {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(1080deg);
+        transform: rotate(1080deg);
+    }
+}
+
+#a7 .a7-1 p:nth-child(1) {
+    -webkit-animation: turn 9s ease infinite;
+    animation: turn 9s ease infinite;
+}
+
+#a7 .a7-2 p:nth-child(1) {
+    -webkit-animation: turn 8s ease infinite;
+    animation: turn 8s ease infinite;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+#a7 .a7-3 p:nth-child(1) {
+    -webkit-animation: turn 7s ease infinite;
+    animation: turn 7s ease infinite;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+#a7 .a7-4 p:nth-child(1) {
+    -webkit-animation: turn 6s ease infinite;
+    animation: turn 6s ease infinite;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+#a7 .a7-5 p:nth-child(1) {
+    -webkit-animation: turn 5s ease-in-out infinite;
+    animation: turn 5s  infinite;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+
+
+
+
+
+
