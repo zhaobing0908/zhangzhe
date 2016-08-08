@@ -24,12 +24,19 @@ if (winW / winH > desW / desH) {
         }
 
     }
+    function removeElement(_element){
+        var _parentElement = _element.parentNode;
+        if(_parentElement){
+            _parentElement.removeChild(_element);
+        }
+    }
     var arr=[{b: 'webkit', e: 'webkitTransitionEnd'}, {b: 'firefox', e: 'transitionend'}, {b: 'trident', e: 'MSTransitionEnd'}];
     for(var i=0;i<3;i++)
         {
             if(navigator.userAgent.toLowerCase().search(arr[i].b)!=-1) {
                 pSpan.addEventListener(arr[i].e, function () {
-                    first.parentNode.removeChild(first);
+                   removeElement(first);
+
                     oLis = document.querySelectorAll(".slide>li");
                     [].forEach.call(oLis, function () {
                         arguments[0].index = arguments[1];  //arguments[1]把当前元素的索引赋值给arguments[0].index 当前元素的自定义属性index
